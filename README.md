@@ -1,47 +1,54 @@
-# Minecraft Village
+# Minecraft Procedural Village Generator
 
-# Structure
+Procedural village generation system built in Python for Minecraft using the MCPI API.
+Generates terrain-aware villages with houses, paths, and landscaping based on world geometry.
+
+## Features
+
+- Procedural generation of multiple houses with recursively generated layouts, unique dimensions and fancy roofs.
+
+- Terrain-aware placement with biome specific terraforming, blending houses into the terrain naturally.
+
+- Pathfinding algorithm designed to connect all buildings in the village, with decorative structures and blending into the surrounding terrain.
+
+
+## Technical Highlights
+
+- Implemented spatial algorithms for structure placement and collision avoidance across uneven and hard-to-terraform terrain
+- Designed a recursive house-generation algorithm with parameterised randomness for high structural variation
+
+
+![Procedural house variation](gifs/houses.gif)
+
+Designed pathfinding algorithm connecting all houses in a village.
+
+![Pathfinding between structures](gifs/pathfinding.gif)
+
+Built terrain analysis and terraforming logic to adapt villages to mountains and slopes
+
+Heres an extreme example:
+![Terrain-aware terraforming](gifs/terraforming.gif)
+
+
+
+Integrated with Minecraft via MCPI for real-time world manipulation
+
+
+## Structure
 village.py file is our programs 'main' file. Running the village.py file will run the program.
 
-# Setup Instructions
-Please set the world spawn point to 0, 0, 0 (/setworldspawn 0 0 0) in any world this program is run. <br />
-In some seeds, the village will generate properly with the default world spawn, however it is not a given.
+## Try it out yourself
 
-# Team Members
-|Name            |Github Name    |Github ID     |
-|----------------|---------------|--------------|
-|Caspian Lack    |Caspian Lack   |caspianlack   |
-|Jake Parkinson  |Jake563        |Jake563       |
-|Joel Cunningham |Joel Cunningham|JoelCunningham|
+1. Install dependencies:
+`pip install mcpi numpy`
+
+2. Start Local Minecraft server<br />
+
+Set the world spawn point to 0, 0, 0 (/setworldspawn 0 0 0) in any world this program is run. <br />
+
+3. Run Script:
+'python village.py'
 
 
-# Project Contributions
-|Name                 |Percentage|Functions Written|Commits Made|Lines Written|Lines Removed|Lines Total|
-|---------------------|---------:|----------------:|-----------:|------------:|------------:|----------:|
-|Caspian Lack         |33%       |34               |75          |2419         |1339         |1080       |
-|Jake Parkinson       |33%       |34               |56          |3560         |2049         |1511       |
-|Joel Cunningham      |33%       |16               |61          |2261         |1307         |0954       |
-|github-classroom[bot]|01%       |00               |02          |0147         |0            |147        |
-|**Total**            |**100%**  |**84**           |**182**     |**8380**     |**4694**     |**3686**   |
-
-# Structure Contributions
-```
-COSC2804-SEP-22-ASSIGNMENT-1-TEAM-23
-├── paths and decorations        - Jake Parkinson  
-├── houses                       - Caspian Lack
-├── terraforming and positioning - Joel Cunningham
-```
-
-# Dependencies
-* MCPI
-* Numpy
-
-# Tested Seeds
-|Seed                 |X   |Z   |
-|---------------------|---:|---:|
-|8614262653530851772  |  20|  50|
-|-7024803338332632605 |  10| 340|
-|4504535438041489910  |  80|-140|
-|400061               | -20| 240|
-|3257840388504953787  | 110|  70|
-|554349389            |  10| 290|
+## Contributions
+This project was developed as part of a 3-person team.
